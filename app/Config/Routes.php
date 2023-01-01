@@ -40,7 +40,8 @@ $routes->get('/', 'StudentController::index');
 $routes->get('/student', 'StudentController::index');
 $routes->get('/add', 'StudentController::addStudent');
 $routes->post('/submit-student', 'StudentController::addRecord');
-$routes->get('/update', 'StudentController::updateStudent');
+$routes->get('/update/(:num)', 'StudentController::updateStudent/$1');
+$routes->get('/delete/(:num)', 'StudentController::deleteStudent/$1');
 
 /*
  * -----------------------  ---------------------------------------------

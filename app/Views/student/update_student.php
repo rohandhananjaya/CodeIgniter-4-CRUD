@@ -39,6 +39,5 @@
   </form>
   <a href="<?php echo base_url('student') ?>" ><button type="button" class="btn btn-primary mt-3">View all</button></a>
 </div>
-
 </body>
 </html>

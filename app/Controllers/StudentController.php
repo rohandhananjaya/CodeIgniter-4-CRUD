@@ -30,10 +30,10 @@ class StudentController extends BaseController
 
         $data = [
             'name' => $this->request->getPost('name'),
-            'email' => $this->request->getPost('name'),
-            'phone' => $this->request->getPost('name'),
+            'email' => $this->request->getPost('email'),
+            'phone' => $this->request->getPost('phone'),
             'image' => $imageName,
-            'status' => $this->request->getPost('name'),
+            'status' => $this->request->getPost('status') == 'on' ? 1 : 0,
         ];
         
         $studentmodel->insert($data);
@@ -41,7 +41,13 @@ class StudentController extends BaseController
     }
 
     public function updateStudent(){
-        return view('student/update_student');
+        $studentmodel = new StudentModel();
+        $data['student'] = $studentmodel->where('id', 1)->find();
+        return view('student/update_student', $data);
     }
-
+    public function deleteStudent($id){
+        $studentmodel = new StudentModel();
+        $studentmodel->delete($id);
+        return redirect('student');
+    }
 }

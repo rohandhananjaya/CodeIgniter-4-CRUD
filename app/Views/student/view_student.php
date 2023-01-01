@@ -37,6 +37,16 @@
             <td><?php echo $row['image']; ?></td>
             <td><?php echo $row['status'] ? 'Show':'Hide'; ?></td>
             <td><?php echo $row['timeofcreate'] ?></td>
+            <td>
+              <a href="<?php echo base_url('update/'.$row['id']);?>" >
+                <button type="button" class="btn btn-success">Edit</button>
+              </a>
+            </td>
+            <td>
+              <a href="<?php echo base_url('delete/'.$row['id']);?>" >
+                <button type="button" class="btn btn-danger">Delete</button>
+              </a>
+            </td>
         </tr>
         <?php endforeach;?>
     </tbody>
