@@ -1,4 +1,4 @@
-# CodeIgniter 4 CRUD Application (alfa)
+# CodeIgniter 4 & MySQL CRUD Application (alfa)
 
 ## What is this project?
 
